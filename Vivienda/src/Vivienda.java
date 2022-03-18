@@ -113,7 +113,8 @@ public class Vivienda {
         this.propietario = propietario;
     }
 
-    public void actualizarPrecio() {
+    public void actualizarPrecio() 
+    {
         final double descuento = getPrecio() - getPrecio() * 0.05;
 
         setPrecio(descuento);
