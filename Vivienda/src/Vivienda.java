@@ -7,10 +7,12 @@
 /**
  *
  * @author Paqui Elena
+ * @version 2.0
  */
 public class Vivienda {
 
     /**
+     * Devuelve precio
      * @return the precio
      */
     protected double getPrecio() {
@@ -18,6 +20,7 @@ public class Vivienda {
     }
 
     /**
+     * Establece precio
      * @param precio the precio to set
      */
     protected void setPrecio(double precio) {
@@ -25,6 +28,7 @@ public class Vivienda {
     }
 
     /**
+     * Devuelve habitaciones
      * @return the numHabitaciones
      */
     protected int getNumHabitaciones() {
@@ -32,6 +36,7 @@ public class Vivienda {
     }
 
     /**
+     * Establece numnero habitaciones
      * @param numHabitaciones the numHabitaciones to set
      */
     protected void setNumHabitaciones(int numHabitaciones) {
@@ -39,6 +44,7 @@ public class Vivienda {
     }
 
     /**
+     * devuelve superficie
      * @return the superficie
      */
     protected double getSuperficie() {
@@ -46,6 +52,7 @@ public class Vivienda {
     }
 
     /**
+     * Establece superficie
      * @param superficie the superficie to set
      */
     protected void setSuperficie(double superficie) {
@@ -53,6 +60,7 @@ public class Vivienda {
     }
 
     /**
+     * Devuelve si tiene parking
      * @return the parking
      */
     protected boolean isParking() {
@@ -60,6 +68,7 @@ public class Vivienda {
     }
 
     /**
+     * Establece si tiene parking
      * @param parking the parking to set
      */
     protected void setParking(boolean parking) {
@@ -67,6 +76,7 @@ public class Vivienda {
     }
 
     /**
+     * Devuelve estado
      * @return the estado
      */
     protected String getEstado() {
@@ -74,6 +84,7 @@ public class Vivienda {
     }
 
     /**
+     * Establece estado
      * @param estado the estado to set
      */
     protected void setEstado(String estado) {
@@ -81,6 +92,7 @@ public class Vivienda {
     }
 
     /**
+     * Devuelve propietario
      * @return the propietario
      */
     protected String getPropietario() {
@@ -88,22 +100,54 @@ public class Vivienda {
     }
 
     /**
+     * Establece propietario
      * @param propietario the propietario to set
      */
     protected void setPropietario(String propietario) {
         this.propietario = propietario;
     }
+       // Atributos
+    /**
+     * precio de la vivienda
+     */
     private double precio;
+    
+    /**
+     * numero de habitaciones de la vivienda
+     */
     private int numHabitaciones;
+    /**
+     * superficie de la vivienda
+     */
     private double superficie;
+    /**
+     * Indica si la vivienda tiene parking
+     */
     private boolean parking;
+    /**
+     * Indica el estado de la vivienda
+     */
     private String estado;
+    /**
+     * Indica el propietario de la vivienda
+     */
     private String propietario;
-
+    /**
+     * Metodo constructor parametrizado
+     * @param precio 
+     */
     public Vivienda(double precio) {
         this.precio = precio;
     }
-
+    /**
+     * Metodo constructor parametrizado
+     * @param precio
+     * @param numHabitaciones
+     * @param superficie
+     * @param parking
+     * @param estado
+     * @param propietario 
+     */       
     public Vivienda(double precio, int numHabitaciones, double superficie, boolean parking, String estado, String propietario) {
         this.precio = precio;
         this.numHabitaciones = numHabitaciones;
@@ -112,9 +156,16 @@ public class Vivienda {
         this.estado = estado;
         this.propietario = propietario;
     }
-
+    
+    /**
+     * Metodo que actualiza el precio de la vivienda 
+     *
+     */
     public void actualizarPrecio() 
     {
+        /**
+         * @param descuento calcula el precio de la vivienda con el descuento
+         */
         final double descuento = getPrecio() - getPrecio() * 0.05;
 
         setPrecio(descuento);
